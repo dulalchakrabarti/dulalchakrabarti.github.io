@@ -24,7 +24,7 @@ placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
 
 placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
 
-var position = new WorldWind.Position(55.0, -106.0, 100.0);
+var position = new WorldWind.Position(20.0, 80.0, 100.0);
 var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
 
 placemark.label = "Placemark\n" +
@@ -45,9 +45,9 @@ polygonAttributes.drawOutline = true;
 polygonAttributes.applyLighting = true;
 
 var boundaries = [];
-boundaries.push(new WorldWind.Position(20.0, -75.0, 700000.0));
-boundaries.push(new WorldWind.Position(25.0, -85.0, 700000.0));
-boundaries.push(new WorldWind.Position(20.0, -95.0, 700000.0));
+boundaries.push(new WorldWind.Position(10.0, 90.0, 700000.0));
+boundaries.push(new WorldWind.Position(15.0, 95.0, 700000.0));
+boundaries.push(new WorldWind.Position(20.0, 100.0, 700000.0));
 
 var polygon = new WorldWind.Polygon(boundaries, polygonAttributes);
 polygon.extrude = true;
@@ -57,7 +57,7 @@ polygonLayer.addRenderable(polygon);
 var modelLayer = new WorldWind.RenderableLayer();
 wwd.addLayer(modelLayer);
 
-var position = new WorldWind.Position(10.0, -125.0, 800000.0);
+var position = new WorldWind.Position(5.0, 75.0, 800000.0);
 var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_models/duck/'};
 
 var colladaLoader = new WorldWind.ColladaLoader(position, config);
