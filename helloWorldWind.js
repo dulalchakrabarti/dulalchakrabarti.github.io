@@ -63,7 +63,7 @@ var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_model
 
 var colladaLoader = new WorldWind.ColladaLoader(position, config);
 colladaLoader.load("duck.dae", function (colladaModel) {
-    colladaModel.scale = 9000;
+    colladaModel.scale = 4000;
     modelLayer.addRenderable(colladaModel);
 });
 
