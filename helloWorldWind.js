@@ -45,9 +45,10 @@ polygonAttributes.drawOutline = true;
 polygonAttributes.applyLighting = true;
 
 var boundaries = [];
-boundaries.push(new WorldWind.Position(10.0, 90.0, 700000.0));
-boundaries.push(new WorldWind.Position(15.0, 95.0, 700000.0));
-boundaries.push(new WorldWind.Position(20.0, 100.0, 700000.0));
+boundaries.push(new WorldWind.Position(40.0, 60.0, 700000.0));
+boundaries.push(new WorldWind.Position(40.0, 100.0, 700000.0));
+boundaries.push(new WorldWind.Position(0.0, 100.0, 700000.0));
+boundaries.push(new WorldWind.Position(0.0, 60.0, 700000.0));
 
 var polygon = new WorldWind.Polygon(boundaries, polygonAttributes);
 polygon.extrude = true;
