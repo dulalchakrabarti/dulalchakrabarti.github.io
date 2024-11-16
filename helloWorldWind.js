@@ -9,30 +9,30 @@ wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
 wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
 
 // Add a placemark
-var placemarkLayer = new WorldWind.RenderableLayer();
-wwd.addLayer(placemarkLayer);
+//var placemarkLayer = new WorldWind.RenderableLayer();
+//wwd.addLayer(placemarkLayer);
 
-var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+//var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
 
-placemarkAttributes.imageOffset = new WorldWind.Offset(
-    WorldWind.OFFSET_FRACTION, 0.3,
-    WorldWind.OFFSET_FRACTION, 0.0);
+//placemarkAttributes.imageOffset = new WorldWind.Offset(
+    //WorldWind.OFFSET_FRACTION, 0.3,
+    //WorldWind.OFFSET_FRACTION, 0.0);
 
-placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
-    WorldWind.OFFSET_FRACTION, 0.5,
-    WorldWind.OFFSET_FRACTION, 1.0);
+//placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+    //WorldWind.OFFSET_FRACTION, 0.5,
+    //WorldWind.OFFSET_FRACTION, 1.0);
 
-placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
+//placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
 
-var position = new WorldWind.Position(20.0, 80.0, 10.0);
-var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+//var position = new WorldWind.Position(20.0, 80.0, 10.0);
+//var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
 
-placemark.label = "Placemark\n" +
-    "Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
-    "Lon " + placemark.position.longitude.toPrecision(5).toString();
-placemark.alwaysOnTop = true;
+//placemark.label = "Placemark\n" +
+    //"Lat " + placemark.position.latitude.toPrecision(4).toString() + "\n" +
+    //"Lon " + placemark.position.longitude.toPrecision(5).toString();
+//placemark.alwaysOnTop = true;
 
-placemarkLayer.addRenderable(placemark);
+//placemarkLayer.addRenderable(placemark);
 
 // Add a polygon
 var polygonLayer = new WorldWind.RenderableLayer();
@@ -55,17 +55,17 @@ polygon.extrude = true;
 polygonLayer.addRenderable(polygon);
 
 // Add a COLLADA model
-var modelLayer = new WorldWind.RenderableLayer();
-wwd.addLayer(modelLayer);
+//var modelLayer = new WorldWind.RenderableLayer();
+//wwd.addLayer(modelLayer);
 
-var position = new WorldWind.Position(0.0, 65.0, 800000.0);
-var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_models/duck/'};
+//var position = new WorldWind.Position(0.0, 65.0, 800000.0);
+//var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_models/duck/'};
 
-var colladaLoader = new WorldWind.ColladaLoader(position, config);
-colladaLoader.load("duck.dae", function (colladaModel) {
-    colladaModel.scale = 4000;
-    modelLayer.addRenderable(colladaModel);
-});
+//var colladaLoader = new WorldWind.ColladaLoader(position, config);
+//colladaLoader.load("duck.dae", function (colladaModel) {
+    //colladaModel.scale = 4000;
+    //modelLayer.addRenderable(colladaModel);
+//});
 
 // Add WMS imagery
 var serviceAddress = "https://neo.sci.gsfc.nasa.gov/wms/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0";
