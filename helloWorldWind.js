@@ -24,7 +24,7 @@ placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
 
 placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/pushpins/plain-red.png";
 
-var position = new WorldWind.Position(20.0, 80.0, 100.0);
+var position = new WorldWind.Position(20.0, 80.0, 10.0);
 var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
 
 placemark.label = "Placemark\n" +
