@@ -58,7 +58,7 @@ polygonLayer.addRenderable(polygon);
 var modelLayer = new WorldWind.RenderableLayer();
 wwd.addLayer(modelLayer);
 
-var position = new WorldWind.Position(5.0, 75.0, 800000.0);
+var position = new WorldWind.Position(0.0, 65.0, 800000.0);
 var config = {dirPath: WorldWind.configuration.baseUrl + 'examples/collada_models/duck/'};
 
 var colladaLoader = new WorldWind.ColladaLoader(position, config);
